@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>GmailSampleConnectorExporterProject</name>
+	<name>sending-json-data-to-a-jms-queue</name>
 	<comment></comment>
 	<projects>
 	</projects>
 	<buildSpec>
 	</buildSpec>
 	<natures>
-		<nature>org.wso2.developerstudio.eclipse.artifact.connector.project.nature</nature>
+		<nature>org.wso2.developerstudio.eclipse.mavenmultimodule.project.nature</nature>
 	</natures>
 </projectDescription>
