@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence name="SaveAttachmentsSequence" trace="disable" xmlns="http://ws.apache.org/ns/synapse">
+    <gmail.init>
+        <userId>rosensuresh@gmail.com</userId>
+        <accessToken>ya29.a0Ae4lvC1SkXqEZJ6luUSKR7pz6l20ySC2Pu_1OFYsJ44D6re3hsFKBGToO9rN91RfCuD0FITz0Ffl0CN2lFoT_FoQfg3W-AXBGOdBwWRLOg3f5uR7GiNc2W1n6nEZVlyUuxFBM3FDir4_U7IqXW0zgzuwMVXVkqS37qE</accessToken>
+        <apiUrl>https://www.googleapis.com/gmail</apiUrl>
+        <refreshToken>1//04p8WtfRkN802CgYIARAAGAQSNwF-L9IrxajtJSPWhZKEBIYAN13Jp8VH3FAxW8e_aKCFw0JpMc82iRaFQRj7xAWXPi69T8rxJ1k</refreshToken>
+    </gmail.init>
+    <gmail.listAllMails>
+        <labelIds>UNREAD</labelIds>
+        <maxResults>1</maxResults>
+        <q>WSO2_CSV_SAMPLE</q>
+    </gmail.listAllMails>
+    <log level="full"/>
+    <property expression="json-eval($.messages[0].id)" name="email_id" scope="default" type="STRING"/>
+    <gmail.init>
+        <userId>rosensuresh@gmail.com</userId>
+        <accessToken>ya29.a0Ae4lvC1SkXqEZJ6luUSKR7pz6l20ySC2Pu_1OFYsJ44D6re3hsFKBGToO9rN91RfCuD0FITz0Ffl0CN2lFoT_FoQfg3W-AXBGOdBwWRLOg3f5uR7GiNc2W1n6nEZVlyUuxFBM3FDir4_U7IqXW0zgzuwMVXVkqS37qE</accessToken>
+        <apiUrl>https://www.googleapis.com/gmail</apiUrl>
+        <refreshToken>1//04p8WtfRkN802CgYIARAAGAQSNwF-L9IrxajtJSPWhZKEBIYAN13Jp8VH3FAxW8e_aKCFw0JpMc82iRaFQRj7xAWXPi69T8rxJ1k</refreshToken>
+    </gmail.init>
+    <gmail.readMail>
+        <id>{$ctx:email_id}</id>
+        <format>full</format>
+    </gmail.readMail>
+    <log level="full"/>
+</sequence>
