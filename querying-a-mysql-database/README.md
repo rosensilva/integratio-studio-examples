@@ -32,12 +32,15 @@ converts the result to JSON.
 <MI_HOME>/lib directory.
 3. Start the MySQL server.
 4. Create the database
-```create database employees;```
-5. Create the table employee
-> create table employees (id int NOT NULL AUTO_INCREMENT, first_name varchar(100), last_name varchar(100), age int,
-  PRIMARY KEY (id));
-6. Enter the following data into the table:
+```sql
+create database employees;
 ```
+5. Create the table employee
+```sql
+create table employees (id int NOT NULL AUTO_INCREMENT, first_name varchar(100), last_name varchar(100), age int, PRIMARY KEY (id));
+```
+6. Enter the following data into the table:
+```sql
 insert into employees(first_name,last_name,age) values("Chava", "Puckett", 28);
 insert into employees(first_name,last_name,age) values("Quentin", "Puckett", 28);
 ```
