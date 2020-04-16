@@ -3,7 +3,7 @@
   <description />
   <config id="Datasource">
     <property name="driverClassName">com.mysql.jdbc.Driver</property>
-    <property name="url">jdbc:mysql://localhost:3307/employees</property>
+    <property name="url">jdbc:mysql://[machine-name/ip]:[port]/employees</property>
     <property name="username"></property>
     <property name="password"></property>
   </config>

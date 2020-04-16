@@ -44,19 +44,20 @@ create table employees (id int NOT NULL AUTO_INCREMENT, first_name varchar(100),
 insert into employees(first_name,last_name,age) values("Chava", "Puckett", 28);
 insert into employees(first_name,last_name,age) values("Quentin", "Puckett", 28);
 ```
-7.Start WSO2 Integration Studio ([Installing WSO2 Integration Studio](https://ei.docs.wso2.com/en/latest/micro-integrator/develop/installing-WSO2-Integration-Studio/)).
+7. Start WSO2 Integration Studio ([Installing WSO2 Integration Studio](https://ei.docs.wso2.com/en/latest/micro-integrator/develop/installing-WSO2-Integration-Studio/)).
 8. In your menu in Studio, click the **File** menu. In the File menu select the **Import...** item.
 9. In the Import window select the **Existing WSO2 Projects into workspace** under **WSO2** folder.
 10. Browse and select the file path to the downloaded sample of this github project ("querying-a-mysql-database" folder 
 of the downloaded github repository).
 11. Open the **RDBMSDataService.dbs** under **querying-a-mysql-database/QueryingAMysqlDatabase/dataservice** directory. 
-12. The **RDBMSDataService.dbs** is the graphical view of the datasource.
+12. The **RDBMSDataService.dbs** is the graphical view of the datasource. Configure connection attributes : url, username,
+password.
 13. Run the sample by right click on the **QueryingAMysqlDatabaseProjectCompositeApplication** under the main 
 **querying-a-mysql-database** project and selecting **Export Project Artifacts and Run**.
-14. Use REST Console or `curl` to make your request.
-        Request URI: http://localhost:8290/services/RDBMSDataService/Employee/Puckett
-        Request method: GET
-        Headers : Accept=application/json
+14. Use REST Console or `curl` to make your request.<br/>
+        Request URI: http://localhost:8290/services/RDBMSDataService/Employee/Puckett<br/>
+        Request method: GET<br/>
+        Headers : Accept=application/json<br/>
 15. You should get the following JSON response
 ```json
 {"employees":{"employee":[{"first_name":"Chava"},{"first_name":"Quentin"}]}}
