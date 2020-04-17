@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api context="/upload" name="UploadToFtpAfterConvertingJsonToXml" xmlns="http://ws.apache.org/ns/synapse">
+    <resource methods="POST">
+        <inSequence>
+            <property name="messageType" scope="axis2" type="STRING" value="application/xml"/>
+            <property expression="$body/jsonObject/employees" name="inputContent" scope="default" type="STRING"/>
+            <fileconnector.append>
+                <destination>ftp://[username]:[password]@[hostname]:[port]/upload/miExample.xml</destination>
+                <inputContent>{$ctx:inputContent}</inputContent>
+            </fileconnector.append>
+            <respond/>
+        </inSequence>
+        <outSequence/>
+        <faultSequence/>
+    </resource>
+</api>
