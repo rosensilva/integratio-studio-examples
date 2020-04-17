@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><artifacts>
-    <artifact name="SaveAttachmentsSequence" groupId="com.example.GmailAttachmetSample.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
-        <file>src/main/synapse-config/sequences/SaveAttachmentsSequence.xml</file>
-    </artifact>
-    <artifact name="PollGmailTask" groupId="com.example.GmailAttachmetSample.task" version="1.0.0" type="synapse/task" serverRole="EnterpriseServiceBus">
-        <file>src/main/synapse-config/tasks/PollGmailTask.xml</file>
-    </artifact>
-</artifacts>
