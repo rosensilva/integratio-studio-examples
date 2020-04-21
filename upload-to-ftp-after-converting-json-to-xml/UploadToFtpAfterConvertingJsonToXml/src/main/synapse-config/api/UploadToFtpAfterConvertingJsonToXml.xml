@@ -2,15 +2,23 @@
 <api context="/upload" name="UploadToFtpAfterConvertingJsonToXml" xmlns="http://ws.apache.org/ns/synapse">
     <resource methods="POST">
         <inSequence>
-            <property name="messageType" scope="axis2" type="STRING" value="application/xml"/>
-            <property expression="$body/jsonObject/employees" name="inputContent" scope="default" type="STRING"/>
-            <fileconnector.append>
-                <destination>ftp://[username]:[password]@[hostname]:[port]/upload/miExample.xml</destination>
+            <propertyGroup description="properties">
+                <property name="messageType" scope="axis2" type="STRING" value="application/xml"/>
+                <property expression="$body/jsonObject/employees" name="inputContent" scope="default" type="STRING"/>
+            </propertyGroup>
+            <fileconnector.create>
+                <source>ftp://[username]:[password]@[hostname]:[port]/upload/miExample.xml</source>
                 <inputContent>{$ctx:inputContent}</inputContent>
-            </fileconnector.append>
+                <setPassiveMode>true</setPassiveMode>
+            </fileconnector.create>
             <respond/>
         </inSequence>
         <outSequence/>
-        <faultSequence/>
+        <faultSequence>
+            <log level="custom">
+                <property name="error" value="An unexpected error occured"/>
+                <property expression="get-property('ERROR_MESSAGE')" name="error_message"/>
+            </log>
+        </faultSequence>
     </resource>
 </api>
