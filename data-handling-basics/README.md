@@ -23,19 +23,22 @@ case-based templates to create your own customized applications in WSO2 Integrat
 downloaded github repository).
 5. Open the **HelloWorld.xml** under **data-handling-basics/DataHandlingBasics/src/main/synapse-config/api** directory. 
 6. The **DataHandlingBasics.xml** is the graphical view of the simple hello world service.
-7. Run the sample by right click on the **DataHandlingBasicsCompositeApplication** under the main **data-handling-basics** 
+7. Right click on the **DataHandlingBasics** project and select **Add or Remove Connector**. Keep the **Add connector**
+option selected and click **Next**. Search for 'file' using the search bar and click the download button located at the
+bottom right corner of the file connector. Click **Finish**.
+8. Run the sample by right click on the **DataHandlingBasicsCompositeApplication** under the main **data-handling-basics** 
 project and selecting **Export Project Artifacts and Run**. In WSO2 Platform Distribution window select both 
 DataHandlingBasics and DataHandlingBasicsConnectorExporter and click finish.
-8. ****Sample 1**** : Through a web browser, access the URL **http://localhost:8290/basic/greet1?username=yourName** 
+9. ****Sample 1**** : Through a web browser, access the URL **http://localhost:8290/basic/greet1?username=yourName** 
    The response prints the words **Hello (yourName)** in your browser.
-9. ****Sample 2**** : Through a web browser, access the URL **http://localhost:8290/basic/greet2?username=yourName**. 
+10. ****Sample 2**** : Through a web browser, access the URL **http://localhost:8290/basic/greet2?username=yourName**. 
 This prints the words **Hello (yourName)** in your browser. Then, access the URL again, but this time do not include any 
 parameters. Verify that the expected output is received.
-10. ****Sample 3**** : Through a web browser, access the URL **http://localhost:8290/basic/greet3?username=yourName&age=22**. 
+11. ****Sample 3**** : Through a web browser, access the URL **http://localhost:8290/basic/greet3?username=yourName&age=22**. 
 This will print the words **Hello (yourName)** in your browser and also save a txt file that contains this data.
-11. ****Sample 4**** : In a browser, access the URL **http://localhost:8290/basic/greet4?username=yourName&age=22**. 
+12. ****Sample 4**** : In a browser, access the URL **http://localhost:8290/basic/greet4?username=yourName&age=22**. 
 This will print the words **Hello (yourName)** in your browser and also save a csv file that contains this data.
-12. ****Sample 5**** : You must now send the HTTP endpoint an HTTP request that includes a body with an attached XML 
+13. ****Sample 5**** : You must now send the HTTP endpoint an HTTP request that includes a body with an attached XML 
 file. Send a POST request to **http://localhost:8290/basic/greet5 ** attaching an XML to the body of the message. A 
 sample XML is provided below.
 
