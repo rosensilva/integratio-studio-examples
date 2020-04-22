@@ -21,16 +21,15 @@ Then the message payload is uploaded to the FTP folder.
 3. In the Import window select the **Existing WSO2 Projects into workspace** under **WSO2** folder.
 4. Browse and select the file path to the downloaded sample of this github project 
 ("upload-to-ftp-after-converting-json-to-xml" folder of the downloaded github repository).
-5. Open the **UploadToFtpAfterConvertingJsonToXml.xml** under 
-**upload-to-ftp-after-converting-json-to-xml/UploadToFtpAfterConvertingJsonToXml/src/main/synapse-config/api/UploadToFtpAfterConvertingJsonToXml.xml** directory. 
-6. The **UploadToFtpAfterConvertingJsonToXml.xml** is the graphical view of the simple hello world service. Configure 
-destination property accordingly.
-7. Right click on the **DataHandlingBasics** project and select **Add or Remove Connector**. Keep the **Add connector**
-option selected and click **Next**. Search for 'file' using the search bar and click the download button located at the
-bottom right corner of the file connector. Click **Finish**.
-8. Run the sample by right click on the **UploadToFtpAfterConvertingJsonToXmlCompositeApplication** under the main 
+5. Lets add the file connector into the workspace. Right click on the **UploadToFtpAfterConvertingJsonToXml** and select 
+**Add or Remove Connector**. Keep the **Add connector** option selected and click **Next>**. Search for 'file' using the 
+search bar and click the download button located at the bottom right corner of the file connector. Click **Finish**.
+6. Open the **UploadToFtpAfterConvertingJsonToXml.xml** under 
+**upload-to-ftp-after-converting-json-to-xml/UploadToFtpAfterConvertingJsonToXml/src/main/synapse-config/api/** directory. 
+Configure destination property accordingly.
+7. Run the sample by right click on the **UploadToFtpAfterConvertingJsonToXmlCompositeApplication** under the main 
 **upload-to-ftp-after-converting-json-to-xml** project and selecting **Export Project Artifacts and Run**.
-9. Make a POST request using Postman to `http://localhost:8290/upload` with following JSON message body, and setting the 
+8. Make a POST request using Postman to `http://localhost:8290/upload` with following JSON message body, and setting the 
 `Content-Type` header to `application/json`:
 ```json
 {

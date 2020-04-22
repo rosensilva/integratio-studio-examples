@@ -2,12 +2,10 @@
 <api context="/upload" name="UploadToFtpAfterConvertingJsonToXml" xmlns="http://ws.apache.org/ns/synapse">
     <resource methods="POST">
         <inSequence>
-            <propertyGroup description="properties">
-                <property name="messageType" scope="axis2" type="STRING" value="application/xml"/>
-                <property expression="$body/jsonObject/employees" name="inputContent" scope="default" type="STRING"/>
-            </propertyGroup>
+            <datamapper config="gov:datamapper/json_to_xml_config.dmc" inputSchema="gov:datamapper/json_to_xml_config_inputSchema.json" inputType="JSON" outputSchema="gov:datamapper/json_to_xml_config_outputSchema.json" outputType="XML" xsltStyleSheet="gov:datamapper/json_to_xml_config_xsltStyleSheet.xml"/>
+            <property expression="$body/employees" name="inputContent" scope="default" type="STRING"/>
             <fileconnector.create>
-                <source>ftp://[username]:[password]@[hostname]:[port]/upload/miExample.xml</source>
+                <filePath>ftp://[username]:[password]@[hostname]:[port]/upload/miExample.xml</filePath>
                 <inputContent>{$ctx:inputContent}</inputContent>
                 <setPassiveMode>true</setPassiveMode>
             </fileconnector.create>
@@ -16,7 +14,7 @@
         <outSequence/>
         <faultSequence>
             <log level="custom">
-                <property name="error" value="An unexpected error occured"/>
+                <property name="error" value="An unexpected error occurred!"/>
                 <property expression="get-property('ERROR_MESSAGE')" name="error_message"/>
             </log>
         </faultSequence>

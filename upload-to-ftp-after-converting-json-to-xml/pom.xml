@@ -10,6 +10,7 @@
   <description>upload-to-ftp-after-converting-json-to-xml</description>
   <modules>
     <module>UploadToFtpAfterConvertingJsonToXml</module>
+    <module>UploadToFtpAfterConvertingJsonToXmlRegistry</module>
     <module>UploadToFtpAfterConvertingJsonToXmlConnectorExporter</module>
     <module>UploadToFtpAfterConvertingJsonToXmlCompositeApplication</module>
   </modules>
