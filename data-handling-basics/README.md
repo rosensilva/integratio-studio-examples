@@ -1,6 +1,7 @@
 # Data Handling Basics
 
-This example application contains few simple examples that introduce most of the basic data handling.
+This example application contains few simple examples that introduce most of the basic data handling. We are using the
+[File connector](https://store.wso2.com/store/assets/esbconnector/details/5d6de1a4-1fa7-434e-863f-95c8533d3df2) for this particular sample.
 
 ### Assumptions
 
