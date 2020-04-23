@@ -79,6 +79,8 @@ following values
 		Principal DN    	cn=Manager,dc=my-domain,dc=com
 		Password		root
 
+![Alt text](../resources/images/extracting-data-from-LDAP-directory/extracting-data-from-LDAP-directory.png?raw=true "ExtractingDataFromLdapDirectory")
+
 16. Run the sample by right click on the **ExtractingDataFromLdapDirectoryCompositeApplication** under the main 
 **extracting-data-from-LDAP-directory** project and selecting **Export Project Artifacts and Run**.
 
