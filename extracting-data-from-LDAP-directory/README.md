@@ -1,7 +1,7 @@
 # Importing data from an LDAP Directory
 
 This example illustrates how to connect to an LDAP directory using WSO2 Micro Integrator and retrieve a list of users 
-which is stored in that directory. 
+which is stored in that directory. We are using the [LDAP connector](https://store.wso2.com/store/assets/esbconnector/details/4ecf8dde-60f3-4e91-ba22-5f49a4e302f4) to achieve this.
 
 ### LDAP
 

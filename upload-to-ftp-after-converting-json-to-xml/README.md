@@ -1,7 +1,7 @@
 # Upload to FTP after converting JSON to XML
 
-This example application illustrates the concept of datamapping to convert JSON data to XML. It also shows you how to 
-configure and use the FTP connector to upload a file to a FTP server.
+This example application illustrates the concept of data-mapping to convert JSON data to XML. It also shows you how to 
+configure and use the [File connector](https://store.wso2.com/store/assets/esbconnector/details/5d6de1a4-1fa7-434e-863f-95c8533d3df2) to upload a file to a FTP server.
 
 ### Assumptions ###
 
